@@ -1,0 +1,105 @@
+
+
+
+Ablauf:
+  ☐ Theorie (Präsentation)
+      warum testing
+      verschiedene levels (unit, integration, e2e)
+
+  ☐ Hands on
+      application mit bereits installierten testing-library und cypress
+      ☐ unit tests schreiben
+          ☐ eine funktion `getItemCount` testen mit coverage
+              coverage als guideline nutzbar, sollte aber nicht heiliger grahl sein
+
+          ☐ eine komponente testen
+            `TodoCount`
+              render mit props count
+              check label
+
+      ☐ integration
+          zusammenspiel mehrerer componenten inkl. funktionen
+            ☐ beispiel schreiben
+                `TodoList` beinhaltet TodoCount
+                  render mit liste 
+                  filter
+                  count
+                `TodoForm` enthält TaskFilters
+
+      ☐ E2E Test schreiben
+          alle bestandteile werden möglichst realitätsnah getestet (auch BE!)
+            ☐ happy path
+                todo app
+                  vordefinierte liste
+                  todo hinzufügen
+                  filtern active completed
+                  1 abhaken
+                  filtern
+                  1 bearbeiten
+                  1 löschen
+
+  ☐ Test Mantra 
+      The more your tests resemble the way your software is used, the more confidence they can give you. Kent C. Dodds
+        https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications
+      daher testing-library in componenten und E2E Tests
+
+      implementierungsdetails sind egal, rewrites möglich etc. 
+
+
+  ☐ Workshop
+      tests für vordefinierte Files schreiben
+      feedback und best practise solution geben 
+
+        Todos:
+          ☐ NextJS Anwendung
+              Navigation
+
+              einzelne routes für einzelne Beispiel-Componenten
+                /button
+                /modal
+                /table
+                /wizard
+          ☐ Components
+              selbstgebaut mit tailwind?
+              ☐ Tabelle
+                  Tabelle lädt Daten von Endpunkt --> muss gemockt werden
+              ☐ Wizard
+                für Integration eines Steps
+                für E2E
+                  
+          ☐ Tests vorbereiten
+              wie weit? 
+
+
+      verschiedene Komponenten vorbereiten + test cases beschreiben https://www.tailwind-kit.com/components/data
+        > unit test einer funktion mit edge case
+            getRenderSizeClass()
+              fälle
+              fehler
+
+        > button, label, click, disabled
+        > tabelle, items, sort, filter
+        > modal öffnen, content, modal schließen
+
+        > Login-Form, form validierung, button deaktiviert, field validation
+
+        > multistep wizard E2E
+
+        > click-outside beim modal als unlösbare aufgabe
+            JSDom hat keine größen!
+
+        > mocking für daten quellen
+          
+
+    ☐ Sourcen
+        ☐ kent C. Dodds - amen!
+            testing javascript
+            blog
+            talks
+            ...
+        ☐ cypress docs
+
+    ☐ Diskussion
+        ☐ nur E2E Tests weil echtestes Verhalten? 
+        ☐ what to test?
+            https://kentcdodds.com/blog/how-to-know-what-to-test
