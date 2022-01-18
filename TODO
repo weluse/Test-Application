@@ -1,6 +1,3 @@
-
-
-
 Ablauf:
   ☐ Theorie (Präsentation)
       warum testing
@@ -47,49 +44,25 @@ Ablauf:
 
 
   ☐ Workshop
-      tests für vordefinierte Files schreiben
-      feedback und best practise solution geben 
+    ☐ Hands on
+        kurze Einleitung 
 
-        Todos:
-          ☐ NextJS Anwendung
-              Navigation
+    ☐ Learnings
+      ☐ testing-library API
+          viele unterschiedliche Funktionen genutzt in Jest und Cypress
 
-              einzelne routes für einzelne Beispiel-Componenten
-                /button
-                /modal
-                /table
-                /wizard
-          ☐ Components
-              selbstgebaut mit tailwind?
-              ☐ Tabelle
-                  Tabelle lädt Daten von Endpunkt --> muss gemockt werden
-              ☐ Wizard
-                für Integration eines Steps
-                für E2E
-                  
-          ☐ Tests vorbereiten
-              wie weit? 
+      ☐ getByRole(), getByLabelText() etc. forcieren Accessable Software
+          ein Label sollte mit for="" und das Input dazu mit id="" versehen sein,
 
-
-      verschiedene Komponenten vorbereiten + test cases beschreiben https://www.tailwind-kit.com/components/data
-        > unit test einer funktion mit edge case
-            getRenderSizeClass()
-              fälle
-              fehler
-
-        > button, label, click, disabled
-        > tabelle, items, sort, filter
-        > modal öffnen, content, modal schließen
-
-        > Login-Form, form validierung, button deaktiviert, field validation
-
-        > multistep wizard E2E
-
-        > click-outside beim modal als unlösbare aufgabe
-            JSDom hat keine größen!
-
-        > mocking für daten quellen
+      ☐ kleinteilige Tests
+          beschreiben Funktionalität der Software im Testnamen
+          bei Fail ist direkt klar, was fehlschlägt, weil der Testname angeführt wird
           
+      ☐ mocking von APIs kann in Unit tests sinnvoll sein
+          wenn sonst unterschiedliche Ergebnisse erzeugt würden/Laufzeit erhöht/API nicht konsistent/...
+     
+    ☐ Fragen zu Beispiel-Ergebnissen
+          offene Runde
 
     ☐ Sourcen
         ☐ kent C. Dodds - amen!
@@ -97,7 +70,6 @@ Ablauf:
             blog
             talks
             ...
-        ☐ cypress docs
 
     ☐ Diskussion
         ☐ nur E2E Tests weil echtestes Verhalten? 
