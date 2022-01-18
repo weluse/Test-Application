@@ -1,0 +1,77 @@
+Ablauf:
+  ☐ Theorie (Präsentation)
+      warum testing
+      verschiedene levels (unit, integration, e2e)
+
+  ☐ Hands on
+      application mit bereits installierten testing-library und cypress
+      ☐ unit tests schreiben
+          ☐ eine funktion `getItemCount` testen mit coverage
+              coverage als guideline nutzbar, sollte aber nicht heiliger grahl sein
+
+          ☐ eine komponente testen
+            `TodoCount`
+              render mit props count
+              check label
+
+      ☐ integration
+          zusammenspiel mehrerer componenten inkl. funktionen
+            ☐ beispiel schreiben
+                `TodoList` beinhaltet TodoCount
+                  render mit liste 
+                  filter
+                  count
+                `TodoForm` enthält TaskFilters
+
+      ☐ E2E Test schreiben
+          alle bestandteile werden möglichst realitätsnah getestet (auch BE!)
+            ☐ happy path
+                todo app
+                  vordefinierte liste
+                  todo hinzufügen
+                  filtern active completed
+                  1 abhaken
+                  filtern
+                  1 bearbeiten
+                  1 löschen
+
+  ☐ Test Mantra 
+      The more your tests resemble the way your software is used, the more confidence they can give you. Kent C. Dodds
+        https://kentcdodds.com/blog/the-testing-trophy-and-testing-classifications
+      daher testing-library in componenten und E2E Tests
+
+      implementierungsdetails sind egal, rewrites möglich etc. 
+
+
+  ☐ Workshop
+    ☐ Hands on
+        kurze Einleitung 
+
+    ☐ Learnings
+      ☐ testing-library API
+          viele unterschiedliche Funktionen genutzt in Jest und Cypress
+
+      ☐ getByRole(), getByLabelText() etc. forcieren Accessable Software
+          ein Label sollte mit for="" und das Input dazu mit id="" versehen sein,
+
+      ☐ kleinteilige Tests
+          beschreiben Funktionalität der Software im Testnamen
+          bei Fail ist direkt klar, was fehlschlägt, weil der Testname angeführt wird
+          
+      ☐ mocking von APIs kann in Unit tests sinnvoll sein
+          wenn sonst unterschiedliche Ergebnisse erzeugt würden/Laufzeit erhöht/API nicht konsistent/...
+     
+    ☐ Fragen zu Beispiel-Ergebnissen
+          offene Runde
+
+    ☐ Sourcen
+        ☐ kent C. Dodds - amen!
+            testing javascript
+            blog
+            talks
+            ...
+
+    ☐ Diskussion
+        ☐ nur E2E Tests weil echtestes Verhalten? 
+        ☐ what to test?
+            https://kentcdodds.com/blog/how-to-know-what-to-test
