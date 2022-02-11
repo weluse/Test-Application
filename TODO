@@ -21,6 +21,7 @@ Ablauf:
                   render mit liste 
                   filter
                   count
+                    enthält fehler! @critical
                 `TodoForm` enthält TaskFilters
 
       ☐ E2E Test schreiben
@@ -46,6 +47,8 @@ Ablauf:
   ☐ Workshop
     ☐ Hands on
         kurze Einleitung 
+        einzelne meets
+        hilfestellung über channel thread ping
 
     ☐ Learnings
       ☐ testing-library API
